@@ -28,6 +28,12 @@ class MticketsController < ApplicationController
 			render action: "edit"
 		end
 	end
+
+	def destroy
+		@mticket.destroy
+		flash[:notice] = "Ticket has been deleted."
+		redirect_to @project
+	end
 	private
 		def mticket_params
 			params.require(:mticket).permit(:title, :description)

@@ -5,4 +5,6 @@ Ticket::Application.routes.draw do
   	resources :mtickets
   end
   resources :users
+  get "/signin", to: "sessions#new"
+  post "/signin", to: "sessions#create"
 end

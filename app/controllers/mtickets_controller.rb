@@ -15,6 +15,19 @@ class MticketsController < ApplicationController
 			render "new"
 		end
 	end
+
+	def edit
+	end
+
+	def update
+		if @mticket.update(mticket_params)
+			flash[:notice] = "Ticket has been updated."
+			redirect_to [@project, @mticket]
+		else
+			flash[:alert] = "Ticket has not been updated."
+			render action: "edit"
+		end
+	end
 	private
 		def mticket_params
 			params.require(:mticket).permit(:title, :description)

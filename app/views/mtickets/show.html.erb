@@ -2,3 +2,4 @@
 <h2><%= @mticket.title %></h2>
 <%= simple_format(@mticket.description) %>
 </div>
+<%= link_to "Edit Ticket", [:edit, @project, @mticket] %>

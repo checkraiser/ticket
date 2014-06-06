@@ -7,3 +7,13 @@ method: :delete,
 data: { confirm:
 "Are you sure you want to delete this project?"
 } %>
+<%= link_to "New Mticket", new_project_mticket_path(@project) %>
+
+<ul id='mtickets'>
+<% @project.mtickets.each do |ticket| %>
+<li>
+#<%= ticket.id %> -
+<%= link_to ticket.title, [@project, ticket] %>
+</li>
+<% end %>
+</ul>

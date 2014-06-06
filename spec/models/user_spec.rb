@@ -30,7 +30,11 @@ describe User do
   	}
 
   	it "authenticate with a correct password" do 
-  		
+  		expect(user.authenticate("hunter2")).to be_true
+  	end
+
+  	it "authenticate with an incorrect password" do 
+  		expect(user.authenticate("hunter")).to_not be_true
   	end
   end
 end

@@ -50,6 +50,7 @@ group :development, :test do
 end
 
 group :test do
+	gem 'simplecov', '~> 0.7.1', :require => false
 	gem 'faker'
 	gem 'capybara'
 	gem 'database_cleaner'

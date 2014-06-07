@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :mticket do
-    title "MyString"
+    title "Make it really shinny"
     description "MyText is larger than 10 characters"
     project nil
   end

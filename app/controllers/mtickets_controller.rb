@@ -1,12 +1,14 @@
 class MticketsController < ApplicationController
 	before_action :set_project
 	before_action :set_mticket, only: [:show, :edit, :update, :destroy]
+	before_action :require_signin!, except: [:show, :index]
 	def new
 		@mticket = @project.mtickets.build
 	end
 
 	def create
 		@mticket = @project.mtickets.build(mticket_params)
+		@mticket.user = current_user
 		if @mticket.save
 			flash[:notice] = "Ticket has been created."
 			redirect_to [@project, @mticket]

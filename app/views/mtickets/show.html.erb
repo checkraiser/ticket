@@ -1,4 +1,5 @@
 <div id='mticket'>
+<span id='author'>Created by <%= @mticket.user.email %></span>
 <h2><%= @mticket.title %></h2>
 <%= simple_format(@mticket.description) %>
 </div>

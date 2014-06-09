@@ -1,6 +1,45 @@
 {
   "RSpec": {
     "coverage": {
+      "D:/study/ruby/ticket/app/controllers/admin/users_controller.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "D:/study/ruby/ticket/app/controllers/admin/base_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "D:/study/ruby/ticket/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        27,
+        3,
+        null,
+        3,
+        null,
+        null,
+        1,
+        1,
+        104,
+        null,
+        1,
+        1,
+        15,
+        null,
+        15,
+        6,
+        6,
+        null,
+        null,
+        null
+      ],
       "D:/study/ruby/ticket/app/controllers/mtickets_controller.rb": [
         1,
         1,
@@ -52,26 +91,6 @@
         1,
         8,
         null,
-        null
-      ],
-      "D:/study/ruby/ticket/app/controllers/application_controller.rb": [
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        26,
-        3,
-        null,
-        3,
-        null,
-        null,
-        1,
-        1,
-        102,
-        null,
-        1,
         null
       ],
       "D:/study/ruby/ticket/app/controllers/projects_controller.rb": [
@@ -135,13 +154,6 @@
         0,
         null,
         null,
-        1,
-        14,
-        null,
-        14,
-        5,
-        5,
-        null,
         null,
         null
       ],
@@ -150,41 +162,7 @@
         1,
         null,
         1,
-        57,
-        null,
-        null
-      ],
-      "D:/study/ruby/ticket/app/models/project.rb": [
-        1,
-        1,
-        null,
-        1,
-        null
-      ],
-      "D:/study/ruby/ticket/app/models/mticket.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        null
-      ],
-      "D:/study/ruby/ticket/app/controllers/sessions_controller.rb": [
-        1,
-        null,
-        1,
-        null,
-        null,
-        1,
-        17,
-        17,
-        17,
-        17,
-        17,
-        null,
-        0,
-        0,
-        null,
+        58,
         null,
         null
       ],
@@ -227,8 +205,42 @@
         2,
         null,
         null
+      ],
+      "D:/study/ruby/ticket/app/models/project.rb": [
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "D:/study/ruby/ticket/app/controllers/sessions_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        17,
+        17,
+        17,
+        17,
+        17,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
+      "D:/study/ruby/ticket/app/models/mticket.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
       ]
     },
-    "timestamp": 1402279148
+    "timestamp": 1402280495
   }
 }

@@ -5,6 +5,27 @@
         1,
         1,
         null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "D:/study/ruby/ticket/app/controllers/admin/base_controller.rb": [
@@ -19,7 +40,7 @@
         1,
         1,
         1,
-        27,
+        32,
         3,
         null,
         3,
@@ -27,13 +48,13 @@
         null,
         1,
         1,
-        104,
+        286,
         null,
         1,
         1,
-        15,
+        20,
         null,
-        15,
+        20,
         6,
         6,
         null,
@@ -100,7 +121,7 @@
         1,
         null,
         1,
-        37,
+        39,
         null,
         null,
         1,
@@ -162,8 +183,15 @@
         1,
         null,
         1,
-        58,
+        130,
         null,
+        null
+      ],
+      "D:/study/ruby/ticket/app/models/project.rb": [
+        1,
+        1,
+        null,
+        1,
         null
       ],
       "D:/study/ruby/ticket/app/controllers/users_controller.rb": [
@@ -206,10 +234,11 @@
         null,
         null
       ],
-      "D:/study/ruby/ticket/app/models/project.rb": [
+      "D:/study/ruby/ticket/app/models/mticket.rb": [
         1,
         1,
-        null,
+        1,
+        1,
         1,
         null
       ],
@@ -220,27 +249,19 @@
         null,
         null,
         1,
-        17,
-        17,
-        17,
-        17,
-        17,
+        18,
+        18,
+        18,
+        18,
+        18,
         null,
         0,
         0,
         null,
         null,
-        null
-      ],
-      "D:/study/ruby/ticket/app/models/mticket.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
         null
       ]
     },
-    "timestamp": 1402280495
+    "timestamp": 1402281293
   }
 }

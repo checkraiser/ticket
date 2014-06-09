@@ -1,6 +1,7 @@
 Ticket::Application.routes.draw do
   
   namespace :admin do 
+  	root :to => 'base#index'
   	resources :users
   end
   root "projects#index"

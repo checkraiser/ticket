@@ -1,5 +1,6 @@
 class Admin::UsersController < Admin::BaseController  
   def index
+    @users = User.all
   end
   def new
   	@user = User.new
@@ -20,6 +21,6 @@ class Admin::UsersController < Admin::BaseController
 
   private
   def user_params
-  	params.require(:user).permit(:name, :password)
+  	params.require(:user).permit(:name, :email, :password, :password_confirmation, :admin)
   end
 end

@@ -1,7 +1,7 @@
 class MticketsController < ApplicationController
+	before_action :require_signin!
 	before_action :set_project
-	before_action :set_mticket, only: [:show, :edit, :update, :destroy]
-	before_action :require_signin!, except: [:show, :index]
+	before_action :set_mticket, only: [:show, :edit, :update, :destroy]	
 	def new
 		@mticket = @project.mtickets.build
 	end
@@ -42,7 +42,10 @@ class MticketsController < ApplicationController
 		end
 		
 		def set_project
-			@project = Project.find(params[:project_id])
+			@project = Project.for(current_user).find(params[:project_id])
+		rescue ActiveRecord::RecordNotFound
+			flash[:alert] = "The project you were looking for could not be found."
+			redirect_to root_path
 		end
 
 		def set_mticket

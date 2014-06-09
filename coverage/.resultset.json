@@ -74,7 +74,7 @@
         1,
         1,
         1,
-        129,
+        135,
         5,
         null,
         5,
@@ -82,7 +82,7 @@
         null,
         1,
         1,
-        593,
+        614,
         null,
         1,
         1,
@@ -140,7 +140,10 @@
         null,
         null,
         1,
-        14,
+        15,
+        null,
+        1,
+        1,
         null,
         null,
         1,
@@ -219,12 +222,40 @@
         null,
         1,
         1,
-        318,
+        333,
         null,
         null,
         1,
         25,
         null,
+        null
+      ],
+      "D:/study/ruby/ticket/app/models/project.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        48,
+        null,
+        1,
+        88,
+        null,
+        null
+      ],
+      "D:/study/ruby/ticket/app/models/mticket.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "D:/study/ruby/ticket/app/models/permission.rb": [
+        1,
+        1,
+        1,
         null
       ],
       "D:/study/ruby/ticket/app/controllers/sessions_controller.rb": [
@@ -249,34 +280,6 @@
         0,
         0,
         null,
-        null
-      ],
-      "D:/study/ruby/ticket/app/models/project.rb": [
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        33,
-        null,
-        1,
-        73,
-        null,
-        null
-      ],
-      "D:/study/ruby/ticket/app/models/mticket.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        null
-      ],
-      "D:/study/ruby/ticket/app/models/permission.rb": [
-        1,
-        1,
-        1,
         null
       ],
       "D:/study/ruby/ticket/app/controllers/users_controller.rb": [
@@ -321,7 +324,7 @@
         null
       ]
     },
-    "timestamp": 1402295619
+    "timestamp": 1402296243
   },
   "Cucumber Features": {
     "coverage": {

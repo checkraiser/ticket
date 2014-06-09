@@ -30,6 +30,11 @@ describe MticketsController do
 			message = "You cannot edit tickets on this project."
 			expect(flash[:alert]).to eql(message)
 		end
+		def cannot_delete_tickets!
+			response.should redirect_to(project)
+			message = "You cannot delete tickets on this project."
+			expect(flash[:alert]).to eql(message)
+		end
 		it "cannot begin to create a ticket" do 
 			get :new, project_id: project.id
 			cannot_create_tickets!
@@ -45,6 +50,10 @@ describe MticketsController do
 		it "cannot update a ticket without permission" do 
 			put :update, project_id: project.id, id: mticket.id, ticket: {}
 			cannot_update_tickets!
+		end
+		it "cannot delete a ticket without permission" do 
+			delete :destroy, project_id: project.id, id: mticket.id
+			cannot_delete_tickets!
 		end
 	end
 end

@@ -35,6 +35,47 @@ feature 'hidden links' do
 			visit '/'
 			assert_no_link_for "New Project"
 		end		
+		scenario "New ticket link is shown to a user with permission" do 
+			define_permission!(user, "view", project)
+			define_permission!(user, "create tickets", project)
+			visit project_path(project)
+			assert_link_for "New Mticket"
+		end
+		scenario "New ticket link is hidden from a user without permission" do 
+			define_permission!(user, "view", project)
+			visit project_path(project)
+			assert_no_link_for "New Mticket"
+		end
+		scenario "Edit ticket link is shown to a user with permission" do 
+			define_permission!(user, "view", project)
+			define_permission!(user, "edit tickets", project)
+			mticket = FactoryGirl.create(:mticket, project: project, user: user)
+			visit project_path(project)
+			click_link mticket.title
+			assert_link_for "Edit Ticket"
+		end
+		scenario "Edit ticket link is hidden to a user without permission" do 
+			define_permission!(user, "view", project)
+			mticket = FactoryGirl.create(:mticket, project: project, user: user)
+			visit project_path(project)
+			click_link mticket.title
+			assert_no_link_for "Edit Ticket"
+		end
+		scenario "Delete ticket link is shown to a user with permission" do 
+			define_permission!(user, "view", project)
+			define_permission!(user, "delete tickets", project)
+			mticket = FactoryGirl.create(:mticket, project: project, user: user)
+			visit project_path(project)
+			click_link mticket.title
+			assert_link_for "Delete Ticket"
+		end
+		scenario "Delete ticket link is hidden from a user without permission" do 
+			define_permission!(user, "view", project)
+			mticket = FactoryGirl.create(:mticket, project: project, user: user)
+			visit project_path(project)
+			click_link mticket.title
+			assert_no_link_for "Delete Ticket"
+		end
 	end
 
 	context "admin users" do 
@@ -50,6 +91,10 @@ feature 'hidden links' do
 		scenario "can see the new project link" do 
 			visit '/'
 			assert_link_for "New Project"
+		end
+		scenario "new ticket link is shown to admins" do 
+			visit project_path(project)
+			assert_link_for "New Mticket"
 		end
 	end
 end

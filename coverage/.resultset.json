@@ -479,7 +479,11 @@
         null
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1402370582
+=======
+    "timestamp": 1402370733
+>>>>>>> Uploaded Assets are now strictly served through the FilesController
   },
   "Cucumber Features": {
     "coverage": {

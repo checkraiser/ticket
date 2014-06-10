@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140610023939) do
+ActiveRecord::Schema.define(version: 20140610031347) do
 
   create_table "assets", force: true do |t|
     t.string   "asset"
     t.integer  "mticket_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "content_type"
   end
 
   create_table "mtickets", force: true do |t|

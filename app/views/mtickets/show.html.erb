@@ -2,14 +2,16 @@
 <span id='author'>Created by <%= @mticket.user.email %></span>
 <h2><%= @mticket.title %></h2>
 <%= simple_format(@mticket.description) %>
-<% if @mticket.asset.present? %>
+<% if @mticket.assets.present? %>
 	<h3>Attached File</h3>
-	<div class="asset">
-		<p>
-			<%= link_to File.basename(@mticket.asset.path), @mticket.asset.url %>
-		</p>
-		<p><small><%= number_to_human_size(@mticket.asset.size) %></small></p>
-	</div>
+	<div class="assets">
+		<% @mticket.assets.each do |asset| %>
+			<p>
+				<%= link_to File.basename(asset.asset.path), asset.asset.url %>
+			</p>
+			<p><small><%= number_to_human_size(asset.asset.size) %></small></p>
+		<% end %>
+	</div>	
 <% end %>
 </div>
 <% authorized?("edit tickets".to_sym, @project) do %>

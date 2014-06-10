@@ -2,6 +2,15 @@
 <span id='author'>Created by <%= @mticket.user.email %></span>
 <h2><%= @mticket.title %></h2>
 <%= simple_format(@mticket.description) %>
+<% if @mticket.asset.present? %>
+	<h3>Attached File</h3>
+	<div class="asset">
+		<p>
+			<%= link_to File.basename(@mticket.asset.path), @mticket.asset.url %>
+		</p>
+		<p><small><%= number_to_human_size(@mticket.asset.size) %></small></p>
+	</div>
+<% end %>
 </div>
 <% authorized?("edit tickets".to_sym, @project) do %>
 	<%= link_to "Edit Ticket", [:edit, @project, @mticket] %>
